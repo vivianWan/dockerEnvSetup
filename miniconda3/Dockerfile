@@ -20,3 +20,10 @@ RUN apt-get install -y curl grep sed dpkg && \
     dpkg -i tini.deb && \
     rm tini.deb && \
     apt-get clean
+
+# Configure the Environment Variable with ENV
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV PATH /opt/conda/bin:$PATH
+
+# EntryPoint
+ENTRYPOINT [ "/usr/bin/tini", "--" ]
