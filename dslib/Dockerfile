@@ -5,7 +5,7 @@ LABEL maintainer=@vivianWan
 RUN conda install --quiet --yes pandas seaborn scikit-learn nltk gensim && \
 conda clean --yes --all
 
-RUN conda install --quiet --yes cython bz2file flask pymongo && \
+RUN conda install --quiet --yes pyspark cython bz2file flask pymongo && \
 conda clean --yes --all
 
 RUN conda update pip
